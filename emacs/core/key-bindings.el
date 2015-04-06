@@ -3,6 +3,8 @@
 (use-package fold-dwim
   :ensure t)
 
+(global-set-key [f12] 'compile)
+
 ;; Sizing windows
 (global-set-key (kbd "<C-up>") 'shrink-window)
 (global-set-key (kbd "<C-down>") 'enlarge-window)

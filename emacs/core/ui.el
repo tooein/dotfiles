@@ -43,10 +43,6 @@
 ;; Turn off welcome screen
 (setq inhibit-startup-message t)
 
-;; Turn on syntax highlighting
-(if (fboundp 'global-font-lock-mode)
-    (global-font-lock-mode 1))
-
 ;; Turn on parentheses highlighting
 (show-paren-mode)
 
