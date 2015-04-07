@@ -1,0 +1,5 @@
+#!/bin/bash
+
+shopt -s cdspell
+shopt -s extglob
+shopt -s checkwinsize
