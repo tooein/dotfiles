@@ -11,8 +11,8 @@ Config {
 			, Run DynNetwork ["-L","250","-H","1000","-l","#00cc00","-n","#cccc00","-h","#cc0000","-t","R<rx>T<tx>","-w","6"] 10
 			, Run Com "/bin/date" ["+\"%a W#%V %Y-%m-%d %H:%M:%S %:::z\""] "date" 10
 			, Run Weather "ENTC" ["-t","TOS <tempC>C"] 3000
-			, Run Com "xmobbar_scripts/mpd_status.sh" [] "mpd" 10
-			, Run Com "xmobbar_scripts/pa-vol.sh" ["xmobar"] "vol" 10
+			, Run Com ".xmobbar_scripts/mpd_status.sh" [] "mpd" 10
+			, Run Com ".xmobbar_scripts/pa-vol.sh" ["xmobar"] "vol" 10
 			, Run StdinReader
 	]
 	, sepChar = "%"
