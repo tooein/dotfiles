@@ -3,6 +3,7 @@
 alias em="emacs -nw"
 alias w3m="w3m -v"
 
+alias ls='ls -F --color=auto --time-style=+"%Y-%m-%d %H:%M:%S %:::z"'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'

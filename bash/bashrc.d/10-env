@@ -8,3 +8,4 @@ export HISTFILE=~/.bash_history
 export HISTCONTROL='ignorespace'
 export EDITOR="emacs -nw"
 export BROWSER=w3m
+export LS_COLORS+=":di=01;37;40"

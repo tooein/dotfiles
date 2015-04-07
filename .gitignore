@@ -2,3 +2,7 @@ emacs/auto-save-list
 emacs/elpa
 emacs/ac-comphist.dat
 *~
+x/xmonad/xmonad.errors  
+x/xmonad/xmonad.hi  
+x/xmonad/xmonad.o  
+x/xmonad/xmonad-x86_64-linux*
