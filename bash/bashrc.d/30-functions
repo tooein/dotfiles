@@ -20,3 +20,8 @@ else
          echo "'$1' is not a valid file"
 fi
 }
+
+rfc() {
+	w3m "https://tools.ietf.org/html/$1"
+}
+
