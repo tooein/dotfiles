@@ -27,3 +27,4 @@
 (add-to-list 'load-path (expand-file-name "./modes/" default-directory))
 
 (require 'language)
+(require 'colors)
