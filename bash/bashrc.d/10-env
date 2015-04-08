@@ -8,7 +8,7 @@ export HISTFILE=~/.bash_history
 export HISTCONTROL='ignorespace'
 export EDITOR="emacs -nw"
 export BROWSER=w3m
-export LS_COLORS+=":di=01;37;40"
+export LS_COLORS+=":di=1;35;40"
 export PAGER='less -FiJMRSWX'
 export MANPAGER=$PAGER
 export PROMPT_DIRTRIM=3
