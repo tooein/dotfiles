@@ -19,7 +19,7 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 export PROMPT_COMMAND=""
 export PROMPT_COMMAND+='export NJOBS=$(jobs | wc -l);'
 export PS1=""
-export PS1+='\[\e[0;31m\]${?#0}' # optional exit status
+export PS1+='\[\e[0;33m\]${?#0}' # optional exit status
 export PS1+='\[\e[0;35m\]${NJOBS#0}'
 export PS1+='\[\e[0;31m\]\u@\h:' # authority
 export PS1+='\[\e[0;36m\]\w$(__git_ps1 " (%s)")' # path

@@ -25,7 +25,7 @@ main = xmonad =<< statusBar "/usr/bin/xmobar ~/.xmobarrc" myPP toggleBarKey defa
 		, modMask = mod4Mask     -- Rebind Mod to the Super key
 		, workspaces = myWorkspaces
 		, keys = myKeys
-		, terminal = "gnome-terminal"
+		, terminal = "xterm"
 		, focusFollowsMouse = False
 		, normalBorderColor = "#444444"
 		, focusedBorderColor = "#00ff00"
