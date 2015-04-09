@@ -1,5 +1,6 @@
 #!/bin/bash
 
+alias sudo='sudo '
 alias em="emacs -nw"
 alias w3m="w3m -v"
 
