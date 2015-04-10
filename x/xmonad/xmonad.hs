@@ -145,8 +145,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	, ((modm .|. shiftMask,   xK_Print ), spawn "sleep 0.2; scrot -s") -- screenshot for window clicked on
 
 	, ((modm .|. shiftMask,   xK_z     ), spawn "xscreensaver-command -lock") -- lock screen
-	, ((modm .|. shiftMask,   xK_plus  ), spawn "amixer -c 0 -- sset Master playback 1+ > /dev/null")
-    , ((modm .|. shiftMask,   xK_backslash  ), spawn "amixer -c 0 -- sset Master playback 1- > /dev/null")
+	, ((modm .|. shiftMask,   xK_plus  ), spawn "amixer -- sset Master playback 1%+ > /dev/null")
+    , ((modm .|. shiftMask,   xK_backslash  ), spawn "amixer -- sset Master playback 1%- > /dev/null")
 
 	, ((modm .|. controlMask, xK_p     ), spawn "mpc toggle") -- mpd play/pause
 	, ((modm .|. controlMask, xK_h     ), spawn "mpc prev") -- mpd previous song
@@ -160,8 +160,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	, ((modm .|. controlMask, xK_y     ), spawn "mpc single") -- mpd toggle single repeat mode
 	, ((modm .|. controlMask .|. shiftMask, xK_r), spawn "mpc consume") -- mpd toggle consume mode, remove song from playlist after completion
 	, ((0, 0x1008FF12), spawn "~/common/bin/mute_toggle.sh &> /dev/null"          ) -- XF86XK_AudioMute
-	, ((0, 0x1008FF11), spawn "amixer -q -c 0 -- sset Master playback 1- > /dev/null"         ) -- XF86XK_AudioLowerVolume
-	, ((0, 0x1008FF13), spawn "amixer -q -c 0 -- sset Master playback 1+ > /dev/null"          ) -- XF86XK_AudioRaiseVolume
+	, ((0, 0x1008FF11), spawn "amixer -q -- sset Master playback 1- > /dev/null"         ) -- XF86XK_AudioLowerVolume
+	, ((0, 0x1008FF13), spawn "amixer -q -- sset Master playback 1+ > /dev/null"          ) -- XF86XK_AudioRaiseVolume
 	, ((0, 0x1008ff02), spawn "xbacklight -inc 10 -time 1 -steps 1") -- Turn backlight up
 	, ((0, 0x1008ff03), spawn "xbacklight -dec 10 -time 1 -steps 1") -- Turn backlight down
 	, ((0, 0x1008ff05), spawn "sudo kbdBacklightControl up"     ) -- XF86KbdBrightnessUp
