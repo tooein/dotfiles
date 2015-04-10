@@ -1,6 +1,7 @@
 emacs/auto-save-list
 emacs/elpa
 emacs/ac-comphist.dat
+emacs/eshell
 *~
 x/xmonad/xmonad.errors
 x/xmonad/xmonad.hi
