@@ -1,5 +1,8 @@
 (provide 'editor)
 
+(use-package smooth-scrolling
+  :ensure t)
+
 (use-package auto-complete
   :ensure t)
 
@@ -26,3 +29,13 @@
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
+
+
+(xterm-mouse-mode t)
+
+(setq scroll-margin 1
+	  scroll-conservatively 0
+	  scroll-up-aggressively 0.01
+	  scroll-down-aggressively 0.01)
+(setq-default scroll-up-aggressively 0.01
+			  scroll-down-aggressively 0.01)

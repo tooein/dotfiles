@@ -19,10 +19,9 @@ then
 	time=""
 	ac="<fc=green>+ </fc>";
 else
-	time="<fc=green>"`/usr/bin/acpi | cut -d " " -f5`" </fc>"
+	time="<fc=green>"`/usr/bin/acpi | grep "remaining" | cut -d " " -f5`" </fc>"
 	ac="<fc=red>- </fc>";
 fi
-
 
 echo "$charge $ac $time"
 
