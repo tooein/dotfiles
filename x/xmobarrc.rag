@@ -13,12 +13,10 @@ Config {
 			, Run Date "%a W#%V %Y-%m-%d %H:%M:%S %s " "date" 10
 			, Run Com ".xmobar/getvolume.sh" [] "MyVol" 5
 			, Run Weather "ENTC" ["-t","TOS <tempC>C"] 36000
-			, Run Com ".xmobar/battery.sh" [] "battery" 100
-			, Run Com ".xmobar/wlan.sh" [] "wlan" 100
 			, Run StdinReader
 		]
 	, sepChar = "%"
 	, alignSep = "}{"
-	, template = "%StdinReader%}{| %cpu%%multicpu% | %memory% | %dynnetwork% | BAT: %battery%| VOL:<fc=#00ff00>%MyVol% </fc> | <fc=green> %wlan% </fc> | <fc=#99ff99>%ENTC%</fc> | <fc=#ee9a00>%date%</fc>"
+	, template = "%StdinReader%}{| %cpu%%multicpu% | %memory% | %dynnetwork% | VOL:<fc=#00ff00>%MyVol% </fc> | <fc=#99ff99>%ENTC%</fc> | <fc=#ee9a00>%date%</fc>"
 	}
 
