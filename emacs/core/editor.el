@@ -6,6 +6,9 @@
 (use-package auto-complete
   :ensure t)
 
+;; This removes auto-indentation when adding newline in fundemental-mode
+(when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
+
 ;; Type "y"/"n" instead of "yes"/"no"
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -30,9 +33,8 @@
 (setq ido-everywhere t)
 (ido-mode 1)
 
-
+;; Mouse settings
 (xterm-mouse-mode t)
-
 (setq scroll-margin 1
 	  scroll-conservatively 0
 	  scroll-up-aggressively 0.01
