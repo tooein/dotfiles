@@ -1,0 +1,1 @@
+/home/xpo/dotfiles/bash/bashrc.d
