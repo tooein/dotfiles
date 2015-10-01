@@ -1,4 +1,4 @@
 #!/bin/bash
 
-export PRINTER="rfbA053"
-export LPDEST="rfbA053"
+export PRINTER="rfba051-1"
+export LPDEST="rfba051-1"

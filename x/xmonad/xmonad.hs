@@ -2,6 +2,7 @@ import System.Exit
 import System.IO
 import Graphics.X11.Xlib
 import Graphics.X11.ExtraTypes.XF86
+import XMonad.Hooks.SetWMName
 
 import XMonad
 import XMonad.Actions.CycleWS
@@ -29,6 +30,7 @@ main = xmonad =<< statusBar "/usr/bin/xmobar ~/.xmobarrc" myPP toggleBarKey defa
 		, focusFollowsMouse = False
 		, normalBorderColor = "#444444"
 		, focusedBorderColor = "#00ff00"
+		, startupHook         = setWMName "LG3D"
 		}
 
 toggleBarKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
