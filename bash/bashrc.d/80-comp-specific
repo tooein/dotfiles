@@ -1,4 +1,7 @@
 #!/bin/bash
 
-export PRINTER="rfba051-1"
-export LPDEST="rfba051-1"
+export PRINTER="rfb-a241-2"
+export LPDEST="rfb-a241-2"
+source /opt/Xilinx/14.7/ISE_DS/settings64.sh &> /dev/null
+export XILINX=/opt/Xilinx/14.7/ISE_DS/ISE
+export PATH=${Xilinx}/bin/lin64:${Xilinx}/sysgen/util:${PATH}

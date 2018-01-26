@@ -27,6 +27,8 @@
     (setq my-linum-format-string format)))
 (defvar my-linum-current-line-number 0)
 
+(setq linum-format "%4d \u2502")
+
 ;; Font
 (set-face-attribute 'default nil :family "Consolata" :height 105)
 

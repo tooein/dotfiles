@@ -174,18 +174,21 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 	-- mod-KEY, Switch to workspace N
 	-- mod-shift-KEY, Move client to workspace N
-	-- mod-shift-ctrl-KEY, Move client to workspace N and switch to workspace N
+	-- mod-shift-alt-KEY, Move client to workspace N and switch to workspace N
 	[((m .|. modm, k), windows $ f i)
 		| (i, k) <- zip (XMonad.workspaces conf) ([xK_bar]++[xK_1     ..    xK_4]++
-		                                                    [xK_q,xK_w,xK_e,xK_r]++
-		                                                    [xK_a,xK_s,xK_d,xK_f]++
-		                                                    [xK_z,xK_x,xK_c,xK_v])
-		, (f, m) <- [(W.greedyView, 0)
-		            ,(W.shift, shiftMask)
-		            ,(\i -> W.greedyView i . W.shift i, shiftMask .|. controlMask)]]
+															[xK_q,xK_w,xK_e,xK_r,xK_t]++
+															[xK_a,xK_s,xK_d,xK_f])
+		, (f, m) <- [	 (W.greedyView, 0)
+						,(W.shift, shiftMask)
+						,(\i -> W.greedyView i . W.shift i, shiftMask .|. altMask)]]
 	++
-	-- mod-alt-{1,2,3}, Switch to physical/Xinerama screens 1, 2, or 3
-	-- mod-alt-shift-{1,2,3}, Move client to screen 1, 2, or 3
-	[((m .|. modm .|. altMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
-		| (key, sc) <- zip [xK_1, xK_2, xK_3] [0..]
-		, (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
+
+		  -- mod-alt-{1,2,3}, Switch to physical/Xinerama screens 1, 2, or 3
+	       -- mod-alt-shift-{1,2,3}, Move client to screen 1, 2, or 3
+	       [((m .|. modm .|. altMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
+	               | (key, sc) <- zip [xK_1, xK_2, xK_3] [0..]
+	               , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
+
+
+
